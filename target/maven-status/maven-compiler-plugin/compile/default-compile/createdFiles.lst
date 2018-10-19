@@ -1,0 +1,6 @@
+es\albarregas\models\CalcularCuota.class
+es\albarregas\controllers\Edificio.class
+es\albarregas\beans\EdificioBean.class
+es\albarregas\controllers\Eleccion.class
+es\albarregas\controllers\NewServlet.class
+es\albarregas\beans\EleccionBean.class
