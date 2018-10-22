@@ -44,5 +44,6 @@
         %>
         </div>
         <h3>  El total es: <%=total%></h3>
+        <%-- NO DISPONES DE ENLACE PARA VOLVER AL INICIO Y LO MAS IMPORTANTE NO ELIMINAS LA SESIÓN --%>
     </body>
 </html>

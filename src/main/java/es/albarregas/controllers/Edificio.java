@@ -74,6 +74,7 @@ public class Edificio extends HttpServlet {
             request.getRequestDispatcher("/JSP/index.jsp").forward(request, response);
         }else{
             //creamos el objeto
+            // PODRÍAS PONER LAS DOS SENTENCIAS EN UNA SOLA continente.setTipoEdificio(request.getParameter("tipoEdi"));
             String tipoEdifi=request.getParameter("tipoEdi");
             continente.setTipoEdificio(tipoEdifi);
             int numHabita=CalcularCuota.pasarEnteros(request.getParameter("numHabi"));
@@ -87,6 +88,7 @@ public class Edificio extends HttpServlet {
             continente.setValorCuota(CalcularCuota.calcularContinente(continente));
             StringBuilder cadenaHtml=new StringBuilder();
             //-----es la construccion de la cadena html a visualizar
+            // EN EL MODELO VISTA CONTROLADOR LA OPERACIÓN DE INTERACTUAR CON EL USUARIO RECAE EN LAS VISTAS, PÁGINAS JSP
             cadenaHtml.append("<div id=\"continente\" class=\"contenido\"><legend><strong>Contrato continente</strong></legend><p>El tipo de edificio es: ");
             cadenaHtml.append(continente.getTipoEdificio());
             cadenaHtml.append("</p><p>Numero de habitaciones: ");

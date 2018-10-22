@@ -104,7 +104,7 @@ public class CalcularCuota {
     
     return prima;
     }
-    
+    // EXISTE EL MÉTODO Integer.parseInt(numero) QUE HACE PRECISAMENTE ESTO
     public static int pasarEnteros(String numero){
         int numeroEnt=0;
         try {
@@ -112,10 +112,12 @@ public class CalcularCuota {
         }catch(NumberFormatException e){
         
             numeroEnt=0;
+            
         }    
         
         return numeroEnt;
     }
+    // EXISTE EL MÉTODO Double.parseDouble(numero) QUE HACE PRECISAMENTE ESTO
     public static double pasarDouble(String numero){
         double numeroDou=0.0;
         

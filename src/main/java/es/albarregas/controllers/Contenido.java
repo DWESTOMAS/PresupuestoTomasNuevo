@@ -66,7 +66,9 @@ public class Contenido extends HttpServlet {
             throws ServletException, IOException {
         processRequest(request, response);
         
+        // PODRÍAS PONER LAS DOS SENTENCIAS EN UNA SOLA
         ContenidoBean contenido=new ContenidoBean();
+        // EXISTEN MÉTODOS DE A API QUE HACEN ESTA FUNCIÓN
         Double cantidadAsegura=CalcularCuota.pasarDouble(request.getParameter("valorAsegurado"));
         boolean asegurado=((request.getParameter("danosAc")!=null));
         String cantidadFranquicia=request.getParameter("canFranqui");
@@ -74,6 +76,7 @@ public class Contenido extends HttpServlet {
         contenido.setDanosAccidentales(asegurado);
         contenido.setFranquicia(cantidadFranquicia);
         contenido.setTotal(CalcularCuota.calcularContenido(contenido));
+        // EN EL MODELO VISTA CONTROLADOR LA OPERACIÓN DE INTERACTUAR CON EL USUARIO RECAE EN LAS VISTAS, PÁGINAS JSP
         StringBuilder cadena =new StringBuilder();
         cadena.append("<div id=\"contenido\" class=\"contenido\"><label>Contrato de contenido</label><p>Cobertura de daños accidentales: ");
         cadena.append((contenido.isDanosAccidentales())? "Si":"No");

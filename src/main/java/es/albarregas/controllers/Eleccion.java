@@ -84,6 +84,7 @@ public class Eleccion extends HttpServlet {
                          tipoSeguro.setContinente(Boolean.TRUE);
                          tipoSeguro.setContenido(Boolean.TRUE);
                          misesion.setAttribute("tipoSeguro", tipoSeguro);
+                         // HUBIERAS CARGADO LA VARIABLE url CON EL VALOR Y AL FINAL DEL MÉTODO UTILIZA getRequestDisp ...
                          //url="./JSP/edificio.jsp";
                           request.getRequestDispatcher("./JSP/edificio.jsp").forward(request, response);
 
@@ -105,6 +106,7 @@ public class Eleccion extends HttpServlet {
                         
         }else if(request.getParameter("edificio")==null && request.getParameter("contenido")==null){
                         // out.println("<p>No has cogido ninguna de las elecciones</p>");
+                        // AQUÍ NO HUBIERA HECHO FALTA CREAR LA SESIÓN
                         misesion.setAttribute("tipoSeguro", tipoSeguro);
                         misesion.invalidate();
                        

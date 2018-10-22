@@ -16,6 +16,7 @@ public class ContenidoBean implements Serializable {
     private boolean danosAccidentales;
     private String franquicia;
     private double total;
+    // NO ENTIENDO EL SIGNIFICADO DE ESTE ATRIBUTO
     private String cadenaHtml;
 
     public double getCantidadAsegurada() {

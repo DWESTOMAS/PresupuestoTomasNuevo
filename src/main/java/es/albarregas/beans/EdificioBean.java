@@ -20,6 +20,7 @@ public class EdificioBean implements Serializable{
     private String tipoConstruccion;
     private double valorMercado;
     private double valorCuota;//Es el total de lo que cuesta el seguro porque hay que pasarlo, y lo añado a session
+    // NO ENTIENDO EL SIGNIFICADO DE ESTE ATRIBUTO
     private String cadenaVisualizar;//Es la cadena a visualizar en la vista
 
     public String getTipoEdificio() {
